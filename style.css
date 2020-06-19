@@ -1,0 +1,409 @@
+#page-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Main animation area*/
+
+#animationArea {
+    position: relative;
+    height: 475px;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    background-image: url("road.jpg");
+    left: 0;
+    right: 0;
+    display: block;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    opacity: .3;
+}
+
+/*class 'move' will be called when user hits the enter button*/
+
+#animationArea.move {
+    animation: animate 5s linear infinite;
+    opacity: 1;
+}
+
+/*Keyframes to move background*/
+
+@keyframes animate {
+    from {
+        background-position: 450px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+/*Opposite Car number 1*/
+
+#oppositeCar1 {
+    position: absolute;
+    background: url("oppositeCar.png");
+    height: 150px;
+    width: 12%;
+    top: 70%;
+    left: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: oppositeCarMove 5s linear infinite;
+}
+
+/*Opposite Car number 2*/
+
+#oppositeCar3 {
+    position: absolute;
+    background: url("oppositeCar.png");
+    height: 150px;
+    width: 12%;
+    top: 70%;
+    left: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: oppositeCarMove 5s 3s linear infinite;
+}
+
+/*Opposite Car number 3*/
+
+#oppositeCar2 {
+    position: absolute;
+    background: url("bmw1.png");
+    height: 200px;
+    width: 13%;
+    top: 71%;
+    left: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: oppositeCarMove 3s linear infinite;
+}
+
+/*Keyframes to move the opposite car*/
+
+@keyframes oppositeCarMove {
+    from {
+        left: 110%;
+    }
+    to {
+        left: -10%;
+    }
+}
+
+/*Main Car*/
+
+#beanCar {
+    position: absolute;
+    background: url("carBeanTransparent2.png");
+    height: 150px;
+    width: 13%;
+    top: 55%;
+    left: 30%;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+}
+
+/*
+#wheel1 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 27.5px;
+    width: 18.33%;
+    top: 62%;
+    left: 4.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+#wheel2 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 27.5px;
+    width: 18.33%;
+    top: 62%;
+    left: 75%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+*/
+
+
+/*
+.oppositeCar1Wheel1 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 27.5px;
+    width: 18.33%;
+    top: 20%;
+    left: 12%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinAntiClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+.oppositeCar1Wheel2 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 27.5px;
+    width: 18.33%;
+    top: 20%;
+    left: 72.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinAntiClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+*/
+
+
+/*
+.oppositeCar2Wheel1 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 30px;
+    width: 15%;
+    top: 47.5%;
+    left: 16%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinAntiClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+.oppositeCar2Wheel2 {
+    position: absolute;
+    background: url("wheel.png");
+    height: 30px;
+    width: 15%;
+    top: 47.5%;
+    left: 73%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: wheelSpinAntiClock 1s linear infinite;
+    animation-fill-mode: forwards;
+}
+*/
+
+
+/*
+@keyframes wheelSpinClock {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wheelSpinAntiClock {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+*/
+
+
+/*Car Front flip jump*/
+
+#beanCar.frontJump1 {
+    animation: frontFlip1 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/*Car Front flip jump- alternative jump*/
+
+#beanCar.frontJump2 {
+    animation: frontFlip2 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/*Keyframes for front flip*/
+
+@keyframes frontFlip1 {
+    0% {
+        transform: translateY(0) rotatez(0);
+        transform-origin: center;
+    }
+    50% {
+        transform: translateY(-300px) rotateZ(180deg);
+    }
+    100% {
+        transform: translateY(0) rotatez(360deg);
+    }
+}
+@keyframes frontFlip2 {
+    0% {
+        transform: translateY(0) rotatez(0);
+    }
+    50% {
+        transform: translateY(-300px) rotateZ(180deg);
+    }
+    100% {
+        transform: translateY(0) rotatez(360deg);
+    }
+}
+
+/*Car backflip jump and keyframes */
+
+#beanCar.backJump1 {
+    animation: backflip1 1.5s both;
+}
+#beanCar.backJump2 {
+    animation: backflip2 1.5s both;
+}
+@keyframes backflip1 {
+    0% {
+        transform: translateY(0) rotatez(0);
+        transform-origin: center;
+    }
+    50% {
+        transform: translateY(-300px) rotateZ(-180deg);
+    }
+    100% {
+        transform: translateY(0) rotatez(-360deg);
+    }
+}
+@keyframes backflip2 {
+    0% {
+        transform: translateY(0) rotatez(0);
+        transform-origin: center;
+    }
+    50% {
+        transform: translateY(-300px) rotateZ(-180deg);
+    }
+    100% {
+        transform: translateY(0) rotatez(-360deg);
+    }
+}
+
+/*Car normal jump and keyframes*/
+
+#beanCar.normalJump1 {
+    animation: jump1 1.5s both;
+}
+#beanCar.normalJump2 {
+    animation: jump2 1.5s both;
+}
+@keyframes jump1 {
+    0% {
+        transform: translateY(0);
+        transform-origin: center;
+    }
+    50% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes jump2 {
+    0% {
+        transform: translateY(0);
+        transform-origin: center;
+    }
+    50% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+main h1 {
+    text-align: center;
+}
+#scoreSection {
+    text-align: center;
+    font-size: 20px;
+}
+
+/*Score section, Choosing jump style buttons and instructions*/
+
+#score {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+    padding-bottom: 8.4%;
+}
+#jumpStyle {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+    padding-bottom: 5.3%;
+    text-align: center;
+}
+#instructions {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+    margin-left: 2.5%;
+}
+#footer {
+    clear: both;
+    background-color: #080808;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    vertical-align: middle;
+}
+#footer p {
+    float: right;
+    margin-right: 5%;
+}
+#startGame h2 {
+    position: absolute;
+    color: white;
+    top: 35%;
+    left: 35%;
+}
+@media screen and (max-width: 768px) {
+    #score {
+        float: left;
+        width: 40%;
+        margin-left: 7.5%;
+        margin-right: 2.5%;
+        padding-bottom: 8.5%;
+        text-align: center;
+    }
+    #jumpStyle {
+        float: left;
+        width: 40%;
+        margin-left: 2.5%;
+        margin-right: 7.5%;
+        text-align: center;
+    }
+    #instructions {
+        clear: both;
+        width: 40%;
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width: 480px) {
+    #score {
+        float: left;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+    }
+    #jumpStyle {
+        float: left;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+    }
+    #instructions {
+        clear: both;
+        width: 40%;
+        margin-left: 30%;
+    }
+}

@@ -1,0 +1,77 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Animation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Arun Creations</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <h1>Bean's ride</h1>
+            <div id="animationArea">
+                <div id="gameArea">
+                    <div id="beanCar">
+                        <div id="wheel1"></div>
+                        <div id="wheel2"></div>
+                    </div>
+                    <div id="oppositeCar1">
+                        <div class="oppositeCar1Wheel1"></div>
+                        <div class="oppositeCar1Wheel2"></div>
+                    </div>
+                    <div id="oppositeCar3">
+                        <div class="oppositeCar1Wheel1"></div>
+                        <div class="oppositeCar1Wheel2"></div>
+                    </div>
+                    <div id="oppositeCar2">
+                        <div class="oppositeCar2Wheel1"></div>
+                        <div class="oppositeCar2Wheel2"></div>
+                    </div>
+                </div>
+                <div id="startGame">
+                    <h2>Press Enter to start the game</h2>
+                </div>
+            </div>
+            <div class="well w-30" id="score">
+                <h2>Score:<span id="gameScore"></span></h2>
+            </div>
+            <div class="well w-30" id="jumpStyle">
+                <h2>Choose flip style:</h2>
+                <button id="front" class="btn btn-primary">Front</button>
+                <button id="back" class="btn btn-primary">Back</button>
+                <button id="normal" class="btn btn-primary">Normal</button>
+            </div>
+            <div class="well w-30" id="instructions">
+                <p>Instructions:</p>
+                <ul>
+                    <li>'Space Bar' to jump</li>
+                    <li>'Up arrow' to move up</li>
+                    <li>'Down arrow' to move down</li>
+                    <li>Clicking the buttons on the left will change the flip style</li>
+                </ul>
+            </div>
+        </main>
+        <footer id="footer">
+            &copy; Solely developed by: Arun Rathinam
+            <p> For any game dev collaborations please contact : arunswaminathanr@yahoo.co.in</p>
+        </footer>
+    </div>
+</body>
+
+</html>
